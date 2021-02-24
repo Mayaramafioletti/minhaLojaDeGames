@@ -19,9 +19,9 @@ public class Categoria {
 	private String classificacao;
 	@NotNull
 	private boolean receita;
-	//@OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
-	//@JsonIgnoreProperties("categoria")
-	//private List <Produto> produto;
+	@OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
+	@JsonIgnoreProperties("categoria")
+	private List <Produto> produto;
 	
 	public long getId() {
 		return id;
